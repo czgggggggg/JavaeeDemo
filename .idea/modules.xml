@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Javaee-Servlet/Javaee-Servlet.iml" filepath="$PROJECT_DIR$/Javaee-Servlet/Javaee-Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaeeDemo.iml" filepath="$PROJECT_DIR$/JavaeeDemo.iml" />
+    </modules>
+  </component>
+</project>

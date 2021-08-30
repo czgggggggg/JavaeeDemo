@@ -1,0 +1,22 @@
+【模块01】Javaee-Servlet
+    helloServlet（servlet的入门例子）
+        LifeCycleServlet //继承GenericServlet类，重写init、destroy、service方法
+        FirstServlet //继承自HttpServlet类，重写doGet、doPost方法。web.xml中配置url。HttpServletResponse.getWriter().println()方法的使用。
+        SecondServlet //通过注解的方式（@WebServlet）的方式声明一个Servlet。web.xml和@WebServlet两种方式选择其一即可。
+    urlDetail（url-pattern的细节）
+        Servlet1 //指定以/开头的url-pattern
+        Servlet2 //@WebServlet(url-pattern = {})可以显式指定多个url-pattern对应一个servlet
+        Servlet3 //指定以.*为后缀的url-pattern //比如访问1.html
+    urlPriority（url-pattern的优先级）
+        // /开头的和*.后缀同时匹配到，总是会执行/开头的，因为/开头的优先级高于*
+        //都是以/开头的之间比较，匹配程度越高，执行谁
+    servletConfig（ServletConfig）
+        //在当前servlet被加载的时候，tomcat会自动地将servlet节点下的init-param节点，里面的数据封装到config对象中。
+            //init方法的ServletConfig对象。ServletConfig.getInitParameter()方法。
+    servletContext（ServletContext）
+        //ServletContext作为一个全局性共享数据的地方
+        ContextServlet1 //通过getServletContext()获取ServletContext对象，再通过ServletContext.setAttribute()设置key-value。
+        ContextServlet2 //通过getServletContext()获取ServletContext对象，再通过ServletContext.getAttribute()获取key对应的value。
+        ContextServlet3和ContextServlet4是使用ServletContext统计网站访问次数的一个简单例子
+        AbsolutePathServlet //通过getServletContext().getRealPath()可以获取指定文件名的文件在最终部署目录中的绝对路径
+        GlobalInitServlet //web.xml的<context-param>节点中可以设置全局性的初始化参数，然后可以通过getServletContext().getInitParameter()获取指定key的value值。

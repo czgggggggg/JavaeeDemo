@@ -1,4 +1,4 @@
-【模块01】Javaee-Servlet
+【模块01】Javaee01-Servlet
     helloServlet（servlet的入门例子）
         LifeCycleServlet //继承GenericServlet类，重写init、destroy、service方法
         FirstServlet //继承自HttpServlet类，重写doGet、doPost方法。web.xml中配置url。HttpServletResponse.getWriter().println()方法的使用。
@@ -20,3 +20,17 @@
         ContextServlet3和ContextServlet4是使用ServletContext统计网站访问次数的一个简单例子
         AbsolutePathServlet //通过getServletContext().getRealPath()可以获取指定文件名的文件在最终部署目录中的绝对路径
         GlobalInitServlet //web.xml的<context-param>节点中可以设置全局性的初始化参数，然后可以通过getServletContext().getInitParameter()获取指定key的value值。
+【模块02】Javaee02-Request
+    ParseRequestServlet【解析请求报文的各个部分】//HttpServletRequest的一些方法的使用：getMethod()、getRequestURI()、getRequestURL()、getProtocol()、getHeader()等等。
+    login.xml、LoginDispatcherServlet、info.html【获取请求参数】
+        //模拟用户登录，校验用户名和密码，校验成功后跳转到个人主页
+        //HttpServletRequest的setCharacterEncoding()方法设置字符集
+        //HttpServletRequest的getParameter()获取提交表单中对应项的内容。
+        //HttpServletRequest的req.getRequestDispatcher()方法获取RequestDispatcher对象，RequestDispatcher的forward()方法执行转发操作。
+    register.html、RegisterServlet【精简获取请求参数的方式】
+        //html表单中如果有很多项数据，需要调用很多次req.getParameter()方法。
+        //可以只调用一次req.getParameterNames()获取所有数据，迭代并解析。
+        //相关方法：parameterNames.hasMoreElements()、parameterNames.nextElement()
+        //另外注意req.getParameter(key)和req.getParameterValues(key)的区别。比如getParameter()只能获取checkbox中的一个数据，而getParameterValues()可以获取checkbox中的所有数据。
+    【封装获取到的请求参数】
+

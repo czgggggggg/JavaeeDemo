@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Javaee-Servlet/Javaee-Servlet.iml" filepath="$PROJECT_DIR$/Javaee-Servlet/Javaee-Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee01-Servlet/Javaee01-Servlet.iml" filepath="$PROJECT_DIR$/Javaee01-Servlet/Javaee01-Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee02-Request/Javaee02-Request.iml" filepath="$PROJECT_DIR$/Javaee02-Request/Javaee02-Request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee03-Response/Javaee03-Response.iml" filepath="$PROJECT_DIR$/Javaee03-Response/Javaee03-Response.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" filepath="$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaeeDemo.iml" filepath="$PROJECT_DIR$/JavaeeDemo.iml" />
     </modules>
   </component>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--action表示的是form表单中的数据要提交给哪个url-->
+    <form action="/request/register" method="post">
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        性别：男<input type="radio" name="gender" value="male">
+             女<input type="radio" name="gender" value="female"><br>
+        爱好：C++<input type="checkbox" name="hobby" value="C++">
+             Java<input type="checkbox" name="hobby" value="Java">
+             Python<input type="checkbox" name="hobby" value="python"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

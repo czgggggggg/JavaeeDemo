@@ -1,3 +1,4 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块01】Javaee01-Servlet
     helloServlet（servlet的入门例子）
         LifeCycleServlet //继承GenericServlet类，重写init、destroy、service方法
@@ -20,6 +21,7 @@
         ContextServlet3和ContextServlet4是使用ServletContext统计网站访问次数的一个简单例子
         AbsolutePathServlet //通过getServletContext().getRealPath()可以获取指定文件名的文件在最终部署目录中的绝对路径
         GlobalInitServlet //web.xml的<context-param>节点中可以设置全局性的初始化参数，然后可以通过getServletContext().getInitParameter()获取指定key的value值。
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块02】Javaee02-Request
     【解析请求报文的各个部分】ParseRequestServlet
         //HttpServletRequest的一些方法的使用：getMethod()、getRequestURI()、getRequestURL()、getProtocol()、getHeader()等等。
@@ -47,6 +49,33 @@
         RequestDomainServlet1、RequestDomainServlet2
         同一个应用的所有组件可以共享context域。    getServletContext().setAttribute()
         同一个应用中只有转发包含关系的组件之间可以共享request域。   req.setAttribute()
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块03】Javaee03-Response
+    【Response】
+        ResponseServlet1、ResponseServlet2
+        resp.setStatus()设置状态码
+        resp.setCharacterEncoding("utf-8");设置响应体的编码格式，但是浏览器仍然中文乱码。
+        resp.setHeader("content-type","text/html;charset=utf-8");设置响应体的编码格式，同时告知浏览器服务端的编码格式。//此时浏览器没有中文乱码。
+        resp.setContentType("text/html;charset=utf-8");效果同上面的方法。
+        resp.setCharacterEncoding("utf-8");设置响应体的编码格式后，将html的内容作为字符串用resp.getWriter().println()输出，浏览器展示html页面，且没有乱码。
+    【发送二进制数据到浏览器】
+        ImageServlet、1.jpg、WEB-INF/2.jpg
+        获取1.jpg或WEB-INF/2.jpg在最终部署目录中的绝对路径。  getServletContext().getRealPath()
+        path -> File -> FileInputStream、输出流使用resp.getOutputStream()
+        将二进制数据从输入流读入输出流，浏览器显示图片。
+    【各种路径】
+        requestURL、requestURI、contextPath、servletPath，都可以通过调用HttpServletRequest对应的get方法获得。
+        requestURI = contextPath + servletPath
+    【定时刷新 & 一个登录案例】
+        RefreshServlet、login.html、LoginServlet、byer.html
+        response.setHeader("refresh","2")可以指定每2秒刷新一次当前页面。
+        resp.setHeader("refresh","2,url=login.html")可以指定经过2秒后，跳转到指定的页面。//注意url可以有多种表达方式。
+        案例：通过/response/refresh或/response/login.html（间接或直接）访问登录页面，login.html的form表单的action将url指向/response/login，
+             LoginServlet的逻辑是从req中获取用户名和密码信息并校对。校对成功，则3秒后访问北邮人页面。校对失败，则提示输入用户名或密码错误，3秒后跳转到/response/login.html重新登录。
+    【重定向】
+    【下载】
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

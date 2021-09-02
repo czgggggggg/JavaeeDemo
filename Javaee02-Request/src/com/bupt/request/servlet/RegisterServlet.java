@@ -1,4 +1,4 @@
-package com.bupt.request.dispatcher;
+package com.bupt.request.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

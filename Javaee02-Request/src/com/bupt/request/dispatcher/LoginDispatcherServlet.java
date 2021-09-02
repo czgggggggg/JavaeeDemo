@@ -28,11 +28,11 @@ public class LoginDispatcherServlet extends HttpServlet {
         if("admin".equals(username) && "admin".equals(password)){
             //用户名和密码校验正确，则跳转到个人主页
             //参数表示的是目标组件info.html
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("info.html");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("info.html");//此处不需要加应用名。转发包含的路径中不能带应用名，否则会报错。
             //执行转发操作
             requestDispatcher.forward(req,resp);
-
         }
+//        System.out.println(req.getContextPath());   //req.getContextPath()可以获取应用名。
     }
 
     @Override

@@ -40,42 +40,48 @@
         //HttpServletRequest的getParameter()获取提交表单中对应项的内容。
         //HttpServletRequest的req.getRequestDispatcher()方法获取RequestDispatcher对象，RequestDispatcher的forward()方法执行转发操作。
         //转发包含的路径中不能带应用名，否则会报错。如果是浏览器，那么则必须要带应用； 如果是服务器，则不要带应用名。
-    【转发和包含的区别】
-        DispatcherServlet1、DispatcherServlet2
+    【转发和包含的区别】DispatcherServlet1、DispatcherServlet2
         req.getRequestDispatcher()获取指定的要跳转到的其他servlet，resp.setContentType()设置内容类型，
         区分dispatcher2.forward()和dispatcher2.include()
         转发留头不留体，包含留头也留体。
-    【request域和context域】
-        RequestDomainServlet1、RequestDomainServlet2
+    【request域和context域】RequestDomainServlet1、RequestDomainServlet2
         同一个应用的所有组件可以共享context域。    getServletContext().setAttribute()
         同一个应用中只有转发包含关系的组件之间可以共享request域。   req.setAttribute()
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块03】Javaee03-Response
-    【Response】
-        ResponseServlet1、ResponseServlet2
+    【Response】ResponseServlet1、ResponseServlet2
         resp.setStatus()设置状态码
         resp.setCharacterEncoding("utf-8");设置响应体的编码格式，但是浏览器仍然中文乱码。
         resp.setHeader("content-type","text/html;charset=utf-8");设置响应体的编码格式，同时告知浏览器服务端的编码格式。//此时浏览器没有中文乱码。
         resp.setContentType("text/html;charset=utf-8");效果同上面的方法。
         resp.setCharacterEncoding("utf-8");设置响应体的编码格式后，将html的内容作为字符串用resp.getWriter().println()输出，浏览器展示html页面，且没有乱码。
-    【发送二进制数据到浏览器】
-        ImageServlet、1.jpg、WEB-INF/2.jpg
+    【发送二进制数据到浏览器】ImageServlet、1.jpg、WEB-INF/2.jpg
         获取1.jpg或WEB-INF/2.jpg在最终部署目录中的绝对路径。  getServletContext().getRealPath()
         path -> File -> FileInputStream、输出流使用resp.getOutputStream()
         将二进制数据从输入流读入输出流，浏览器显示图片。
-    【各种路径】
+    【各种路径】PathServlet
         requestURL、requestURI、contextPath、servletPath，都可以通过调用HttpServletRequest对应的get方法获得。
         requestURI = contextPath + servletPath
-    【定时刷新 & 一个登录案例】
-        RefreshServlet、login.html、LoginServlet、byer.html
+    【定时刷新 & 一个登录案例】RefreshServlet、login.html、LoginServlet、byer.html
         response.setHeader("refresh","2")可以指定每2秒刷新一次当前页面。
         resp.setHeader("refresh","2,url=login.html")可以指定经过2秒后，跳转到指定的页面。//注意url可以有多种表达方式。
         案例：通过/response/refresh或/response/login.html（间接或直接）访问登录页面，login.html的form表单的action将url指向/response/login，
              LoginServlet的逻辑是从req中获取用户名和密码信息并校对。校对成功，则3秒后访问北邮人页面。校对失败，则提示输入用户名或密码错误，3秒后跳转到/response/login.html重新登录。
-    【重定向】
+    【重定向】RedirectServlet
+        方式一：resp.setStatus(302) + resp.setHeader("Location","http://www.baidu.com")
+        方式二：resp.sendRedirect("http://www.baidu.com")
     【下载】
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+【模块04】Javaee04-Fileupload
+    【上传图片遇到问题】upload1.html、UploadServlet1、upload2.html、UploadServlet2
+        form表单的属性中没有添加：enctype="multipart/form-data"  //上传图片，只会上传文件名。
+        form表单的属性中添加：enctype="multipart/form-data"  //可以上传二进制数据。  //但是添加了又无法获取请求参数。
+        出现以上问题的原因：数据结构由原来的key1=value1&key2=value2形式转换成了-----WebkitFormBoundary的形式。
+            以前可以利用&来分割，分割的各个部分进一步切割key value放入map。随着数据结构发生更改，获取不到。
+        解决：手动分割（麻烦且困难）、直接使用三方工具类来完成文件上传及form表单数据获取。
+        Postman和Fiddler的使用。
+    【文件上传组件的使用】
 
 

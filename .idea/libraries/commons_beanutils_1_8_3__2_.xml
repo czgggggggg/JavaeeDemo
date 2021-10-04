@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="commons-beanutils-1.8.3 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/commons-dbutils-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/commons-fileupload-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/druid-1.1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Javaee04-Fileupload/web/WEB-INF/lib/mysql-connector-java-5.1.37.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

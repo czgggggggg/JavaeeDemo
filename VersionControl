@@ -86,7 +86,17 @@
         commons-fileupload的使用。将form表单的处理分为对普通表单数据的处理和对上传文件的处理。
         //使用IE浏览器出现空指针异常，换Chrome浏览器，因为IE浏览器item.getName()获取的是路径而非文件名。//【中文乱码还是没解决】
         //处理逻辑不需要记，会用即可（看commons-fileupload的使用文档）。
+    【使用组件将数据封装到bean中】User、upload4.html、UploadServlet4、upload5.html、UploadServlet5、upload6.html、UploadServlet6、FileUploadUtils
+        //创建一个User类作为bean，将表单数据和上传文件（的相对路径）封装到一个User对象中。
+        //UploadServlet4是中规中矩的方式，条件判断。
+        //UploadServlet5，使用一个hashmap结构保存中间结果，最后使用BeanUtils.populate()将hashmap封装到user中。
+        //UploadServlet6，将UploadServlet5中文件上传中获取hashmap的部分封装到文件上传工具类FileUploadUtils里面，最后可以使用BeanUtils.populate()将hashmap封装到任意的bean中。
+    【所有文件都在同一目录下，文件数过多的问题】
+        修改FileUploadUtils工具类。利用文件名的哈希值，建立多级目录。
+    【封装到bean后，连上数据库】DruidUtils、upload7.html、UploadServlet7
+        //数据库的包 mysql-connector-java druid dbutils  //对应JDBC、数据库连接池、dbutils
 
+    【相同目录中有同名文件怎么办】
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块05】Javaee05-Cookie
 【模块06】Javaee06-Session

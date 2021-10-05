@@ -95,12 +95,19 @@
         修改FileUploadUtils工具类。利用文件名的哈希值，建立多级目录。
     【封装到bean后，连上数据库】DruidUtils、upload7.html、UploadServlet7
         //数据库的包 mysql-connector-java druid dbutils  //对应JDBC、数据库连接池、dbutils
-
-    【相同目录中有同名文件怎么办】
+        //注意QueryRunner传datasource和不传datasource的区别。
+        //runner.update()
+    【展示用户信息】info.html、InfoServlet
+        //ResultHandler的两种：BeanListHandler（将取出的结果封装成listbean的形式）、BeanHandler（将取出的结果封装成一个bean对象）
+        //runner.query()
+        【问题还未解决】卡死在这里：com.alibaba.druid.support.logging.JakartaCommonsLoggingImpl.info {dataSource-1} inited
+    【相同目录中有同名文件怎么办】FileUploadUtils
+        filename = UUID.randomUUID() + "-" + filename;//UUID.randomUUID()随机生成一个字符串
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块05】Javaee05-Cookie
 【模块06】Javaee06-Session
 【模块07】Javaee07-Cart//购物车
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块08】Javaee08-JSP
 【模块09】Javaee09-Filter
 【模块10】Javaee10-Listener

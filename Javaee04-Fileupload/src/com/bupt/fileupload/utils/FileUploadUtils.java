@@ -12,6 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @Author czgggggggg
@@ -81,6 +82,8 @@ public class FileUploadUtils {
         //保存到服务器磁盘上
         //-------------------------------------------------------
         //哈希值的特点：散列 31 乘子
+        //其他方式完全ok
+        filename = UUID.randomUUID() + "-" + filename;//UUID.randomUUID()随机生成一个字符串//解决同一个目录下出现多个同名文件的问题。
         int code = filename.hashCode();
         //8位16进制  1 /2 /3 /8 /9 /a /f /1 /filename
         //           16*16*16*16*16*16*16*16/ 寥寥无几的几个文件

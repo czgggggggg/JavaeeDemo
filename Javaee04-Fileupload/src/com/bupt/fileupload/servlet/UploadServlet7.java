@@ -22,6 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -31,7 +32,7 @@ import java.util.List;
  * @Date 2021/10/4
  * @Description
  */
-@WebServlet("/upload6")
+@WebServlet("/upload7")
 public class UploadServlet7 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,6 +41,9 @@ public class UploadServlet7 extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //中文乱码的解决
+        resp.setContentType("text/html;charset=utf-8");
+
         //是否包含上传文件
         boolean result = ServletFileUpload.isMultipartContent(req);
         if(!result)
@@ -62,7 +66,16 @@ public class UploadServlet7 extends HttpServlet {
         //----------------------------------------//
         //接着就是数据库那一套
         //数据库的包 mysql-connector-java druid dbutils
-        QueryRunner runner = new QueryRunner(DruidUtils.getDataSource());
+        QueryRunner runner = new QueryRunner(DruidUtils.getDataSource());//QueryRunner()中传入datasource则connection不用自己关，反之需要自己关。
+        try {
+            runner.update("insert into user values (null,?,?,?)",
+                    user.getUsername(),
+                    user.getPassword(),
+                    user.getImage());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        resp.getWriter().println("注册成功");
 
         //----------------------------------------//
     }

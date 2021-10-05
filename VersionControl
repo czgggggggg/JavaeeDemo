@@ -70,9 +70,15 @@
     【重定向】RedirectServlet
         方式一：resp.setStatus(302) + resp.setHeader("Location","http://www.baidu.com")
         方式二：resp.sendRedirect("http://www.baidu.com")
-    【下载】
-
-
+    【下载】download.html、ViewServlet、DownloadServlet、FileServlet
+        response也可以用来下载文件。
+        浏览器对待文件的处理方式：1.对于可以打开的文件，默认情况下执行打开显示内容操作。比如图片、html等；
+                              2.对于无法正常打开的文件，默认情况下执行下载操作，比如zip文件、exe文件。
+        对于浏览器可以打开的文件，如果不想让其打开，可以设置一个响应头，这样文件就会被下载下来。
+        [1]直接显示图片；
+        [2]利用servlet来显示一个图片； //直接利用【发送二进制数据到浏览器】中的代码
+        [3]利用servlet来下载一个图片;  //直接利用【发送二进制数据到浏览器】中的代码，另外添加一个响应头resp.setHeader("Content-Disposition","attachment;filename=1.jpg");
+        [4]将viewServlet和DownloadServlet做一个精简优化。//FileServlet//增加一个请求参数op
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块04】Javaee04-Fileupload
     【上传图片遇到问题】upload1.html、UploadServlet1、upload2.html、UploadServlet2

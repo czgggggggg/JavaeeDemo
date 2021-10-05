@@ -138,7 +138,7 @@
         当前的域名是localhost。通过cookie.setDomain()，可以指定域名名称，并且该域名的子域名都可以访问这个cookie。
         例如：cookie.setDomain("czgbyer.com")，则czgbyer.com:8080、video.czgbyer.com:8080、story.video.czgbyer.com:8080等等都可以访问这个cookie。
         另外，出于安全性考虑浏览器不允许cookie跨域。比如，localhost:8080携带的cookie不允许localhost:80访问。
-        【未解决】访问http://czgbyer.com:8080/cookie/domain失败。    //[Fiddler] DNS Lookup for "czgbyer.com" failed. System.Net.Sockets.SocketException 不知道这样的主机。
+        【未解决】访问http://czgbyer.com:8080/cookie/domain失败。     //[Fiddler] DNS Lookup for "czgbyer.com" failed. System.Net.Sockets.SocketException 不知道这样的主机。
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块06】Javaee06-Session
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -125,10 +125,15 @@
         默认情况下，浏览器请求当前主机下的所有资源都会携带cookie。
         可以在新建一个Cookie对象的时候，调用cookie的setPath()方法，让浏览器在访问指定的资源路径的时候才携带这个cookie。
         //req.getContextPath()
-    【设置存活时间】
-
-    【删除cookie】
-
+    【设置存活时间】MaxAgeServlet1
+        默认情况下，如果没有设置，那么该cookie的存活时间仅仅是在浏览器开启的这段时间内有效，此时cookie是保存在浏览器的内存中。//【我这里测试了一下，默认情况下好像cookie一直不会失效。】
+        如果要想让其进行持久化存储，这需要设置一个MaxAge，值表示秒数。
+    【删除cookie】MaxAgeServlet2
+        通过设置MaxAge为0，删除指定的cookie。//并没有提供一个deleteCookie的API。
+        //记得设置为MaxAge为0的cookie要通过resp.addCookie()重新返回，否则无效，因为浏览器并不知道cookie的MaxAge被设置成了0，如果浏览器再发起一个请求，携带的这个cookie的MaxAge还是原来的值。
+        //而且如果cookie原先设置了path，还要重新设置一遍，否则无效。
+        //也就是说，删除cookie时，必须要设置和生成cookie时相同的path，否则无法删除cookie
+        //如果没有设置path，那么删除不需要设置path；但是只要你设置了path，那么删除就一定要和生成时保持相同的path，否则无法删除。
     【设置domain】
 
 

@@ -111,6 +111,29 @@
         filename = UUID.randomUUID() + "-" + filename;//UUID.randomUUID()随机生成一个字符串
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块05】Javaee05-Cookie
+    【Cookie】CookieServlet
+        1.新建一个Cookie对象，写入name和value；
+        2.response调用addCookie()，将cookie信息以Set-Cookie响应头的形式发送回客户端。
+          //cookie的value中不能有空格。
+    【案例一：以上次的登录时间作为cookie】LastLoginServlet
+        request.getCookies()、cookie.getName()、cookie.getValue()
+        把系统的当前时间+""作为value的cookie，传入response.addCookie()中返回。
+    【案例二：从登录页面跳转到用户页面，将登录页面的用户名参数通过Cookie传输，在用户页面取出并显示】LoginServlet、InfoServlet
+        //resp.setContentType("text/html;charset=utf-8");
+        //req.getParameter、resp.addCookie()、resp.setHeader、req.getContextPath()、cookie.getName()、cookie.getValue()
+    【设置path】PathServlet1、PathServlet2
+        默认情况下，浏览器请求当前主机下的所有资源都会携带cookie。
+        可以在新建一个Cookie对象的时候，调用cookie的setPath()方法，让浏览器在访问指定的资源路径的时候才携带这个cookie。
+        //req.getContextPath()
+    【设置存活时间】
+
+    【删除cookie】
+
+    【设置domain】
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块06】Javaee06-Session
 【模块07】Javaee07-Cart//购物车
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------

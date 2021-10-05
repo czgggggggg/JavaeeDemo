@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Javaee02-Request/Javaee02-Request.iml" filepath="$PROJECT_DIR$/Javaee02-Request/Javaee02-Request.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javaee03-Response/Javaee03-Response.iml" filepath="$PROJECT_DIR$/Javaee03-Response/Javaee03-Response.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" filepath="$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee05-Cookie/Javaee05-Cookie.iml" filepath="$PROJECT_DIR$/Javaee05-Cookie/Javaee05-Cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaeeDemo.iml" filepath="$PROJECT_DIR$/JavaeeDemo.iml" />
     </modules>
   </component>

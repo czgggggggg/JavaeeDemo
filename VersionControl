@@ -148,12 +148,25 @@
     【Session存取数据】login.html、LoginServlet、InfoServlet
         session可以存放信息，再次请求的时候可以从session中取出需要的信息。
         session.setAttribute()、session.getAttribute()
-    【】
-
-
-
-
-
+    【关闭浏览器后重新开启，session对象是否被销毁？】
+        答：原先的session对象并没有被销毁。只是变得不可达。
+    【重启服务器，session对象是否被销毁？】LifeServlet1、LifeServlet2
+        答：原先的session对象并被销毁，会重新创建新的对象。但里面的数据还在。
+        1.先访问life1，后访问life2。发现session是同一个，SESSIONID不变，session中保存的值还在。
+        2.重启tomcat，再次访问life2。发现session不是同一个，但是，SESSIONID不变，session中保存的值还在。
+        说明：原先的session对象并被销毁，会重新创建新的对象。但里面的数据还在。
+        原因：应用被关闭的时候，session里面的数据以及session的id会全部序列化到本地硬盘中，在磁盘中生成sessions.ser文件。
+        注意点1：不能通过重启IDEA的tomcat来验证。因为IDEA的tomcat在每次启动前的时候都会去复制本地的tomcat的配置文件，把原先的文件全部删除，用新的文件来替代（所以SESSION.ser就消失了）
+                通过Tomcat管理页面来停止、启动tomcat。  http://localhost:8080/manager
+        注意点2：tomcat管理页面403 Access Denied的解决方法。
+                修改/webapps/manager/META-INF/目录下的context.xml文件。
+                参考链接：https://www.jianshu.com/p/73758fea175e
+       【疑问】没找到sessions.ser文件。
+    【区别getSession()和getSession(boolean var1)】
+    【session生命周期】
+        session.invalidate();
+    【context、session、request】
+        context上下文（作用于整个应用和生命周期） > session会话（作用于当前会话） > request请求（作用于当次请求）
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块07】Javaee07-Cart//购物车
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------

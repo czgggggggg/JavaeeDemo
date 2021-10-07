@@ -141,6 +141,19 @@
         【未解决】访问http://czgbyer.com:8080/cookie/domain失败。     //[Fiddler] DNS Lookup for "czgbyer.com" failed. System.Net.Sockets.SocketException 不知道这样的主机。
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块06】Javaee06-Session
+    【Cookie和Session】SessionServlet
+        request.getSession()可以生成一个session对象。
+        第一次请求时，响应报文有一个Set-Cookie响应头，里面包含生成的session信息JSESSIONID，第二次请求时，响应报文不再有Set-Cookie响应头，而请求报文中多了一个Cookie响应头，里面包含的是第一次请求时生成的session信息JSESSIONID。
+        【疑问】需要将web根目录下的index.jsp删除是为什么？
+    【Session存取数据】login.html、LoginServlet、InfoServlet
+        session可以存放信息，再次请求的时候可以从session中取出需要的信息。
+        session.setAttribute()、session.getAttribute()
+    【】
+
+
+
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块07】Javaee07-Cart//购物车
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------

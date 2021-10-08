@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d8ac4ae-5aee-4487-a842-0edf677a2312" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Javaee07_Cart_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Javaee08_JSP_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javaee07-Cart/Javaee07-Cart.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javaee07-Cart/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/Javaee08-JSP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/web/1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/web/2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/web/3.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javaee08-JSP/web/domain.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javaee08-JSP/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Javaee08-JSP/web/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VersionControl" beforeDir="false" afterPath="$PROJECT_DIR$/VersionControl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,13 +40,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="VersionControl" value="9" />
-          <entry key="class" value="20" />
+          <entry key="class" value="21" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="40" />
           <entry key="iml" value="2" />
           <entry key="java" value="321" />
           <entry key="jpg" value="8" />
-          <entry key="jsp" value="6" />
+          <entry key="jsp" value="17" />
           <entry key="properties" value="3" />
           <entry key="txt" value="1" />
           <entry key="xml" value="19" />
@@ -56,12 +54,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="20" />
+          <entry key="CLASS" value="21" />
           <entry key="HTML" value="40" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="8" />
           <entry key="JAVA" value="321" />
-          <entry key="JSP" value="6" />
+          <entry key="JSP" value="17" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Properties" value="3" />
           <entry key="XML" value="19" />
@@ -69,12 +67,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="VersionControl" value="9584" />
+          <entry key="VersionControl" value="9675" />
           <entry key="dummy" value="41" />
           <entry key="gitignore" value="9" />
           <entry key="html" value="1290" />
           <entry key="java" value="11392" />
-          <entry key="jsp" value="19" />
+          <entry key="jsp" value="509" />
           <entry key="properties" value="1" />
           <entry key="xml" value="171" />
         </counts>
@@ -83,8 +81,8 @@
         <counts>
           <entry key="HTML" value="1290" />
           <entry key="JAVA" value="11392" />
-          <entry key="JSP" value="19" />
-          <entry key="PLAIN_TEXT" value="9634" />
+          <entry key="JSP" value="509" />
+          <entry key="PLAIN_TEXT" value="9725" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="171" />
         </counts>
@@ -93,20 +91,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VersionControl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="208" column="11" selection-start-line="208" selection-start-column="11" selection-end-line="208" selection-end-column="11" />
+            <state relative-caret-position="594">
+              <caret line="195" column="23" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/softwareforcode/apache-tomcat-8.5.54-windows-x64/apache-tomcat-8.5.54/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.class">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="95" column="18" lean-forward="true" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+            <state relative-caret-position="164">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -118,6 +116,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -181,10 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Javaee04-Fileupload/src/com/bupt/fileupload/servlet/UploadServlet2.java" />
-        <option value="$PROJECT_DIR$/Javaee04-Fileupload/web/upload2.html" />
-        <option value="$PROJECT_DIR$/Javaee04-Fileupload/web/upload3.html" />
-        <option value="$PROJECT_DIR$/Javaee04-Fileupload/src/com/bupt/fileupload/servlet/UploadServlet3.java" />
         <option value="$PROJECT_DIR$/Javaee04-Fileupload/web/upload4.html" />
         <option value="$PROJECT_DIR$/Javaee04-Fileupload/src/com/bupt/fileupload/bean/User.java" />
         <option value="$PROJECT_DIR$/Javaee04-Fileupload/src/com/bupt/fileupload/servlet/UploadServlet4.java" />
@@ -230,8 +225,12 @@
         <option value="$PROJECT_DIR$/Javaee06-Session/src/com/bupt/servlet/life/LifeServlet2.java" />
         <option value="$PROJECT_DIR$/Javaee06-Session/src/com/bupt/servlet/lifecycle/CreateSessionServlet.java" />
         <option value="$PROJECT_DIR$/Javaee06-Session/src/com/bupt/servlet/lifecycle/DestroySessionServlet.java" />
-        <option value="$PROJECT_DIR$/Javaee08-JSP/web/index.jsp" />
+        <option value="$PROJECT_DIR$/Javaee08-JSP/web/1.jsp" />
+        <option value="$PROJECT_DIR$/Javaee08-JSP/web/2.jsp" />
+        <option value="$PROJECT_DIR$/Javaee08-JSP/web/3.jsp" />
+        <option value="$PROJECT_DIR$/Javaee08-JSP/web/domain.jsp" />
         <option value="$PROJECT_DIR$/VersionControl" />
+        <option value="$PROJECT_DIR$/Javaee08-JSP/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -335,32 +334,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="JavaeeDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaeeDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaeeDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaeeDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaeeDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaeeDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="Javaee08_JSP_war_exploded" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaeeDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaeeDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="Javaee08_JSP_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -371,7 +344,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1633660893672" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1633662749967" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Javaee02-Request/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -533,7 +506,7 @@
       <workItem from="1630504517880" duration="11254000" />
       <workItem from="1630572387236" duration="17872000" />
       <workItem from="1630835092339" duration="2432000" />
-      <workItem from="1633323079705" duration="69917000" />
+      <workItem from="1633323079705" duration="71669000" />
     </task>
     <servers />
   </component>
@@ -549,7 +522,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119258000" />
+    <option name="totallyTimeSpent" value="121010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -574,7 +547,7 @@
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32892805" />
       <window_info anchor="bottom" id="Message" order="9" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32892805" />
-      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.2760646" />
+      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.4185022" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
@@ -597,76 +570,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day6 Cart/源码/sessionManager/cookie/src/com/cskaoyan/cookie/login/InfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/Javaee05-Cookie.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day6 Cart/源码/sessionManager/cookie/src/com/cskaoyan/cookie/login/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/src/com/bupt/servlet/login/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="34" column="68" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/src/com/bupt/servlet/login/InfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/src/com/bupt/servlet/path/PathServlet2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day6 Cart/源码/sessionManager/cookie/src/com/cskaoyan/cookie/path/PathServlet1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee05-Cookie/src/com/bupt/servlet/path/PathServlet1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day6 Cart/源码/sessionManager/cookie/src/com/cskaoyan/cookie/path/PathServlet2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -935,13 +838,6 @@
     <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day6 Cart/源码/sessionManager/cart/src/com/cskaoyan/cart/AddCartServlet.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/softwareforcode/apache-tomcat-8.5.54-windows-x64/apache-tomcat-8.5.54/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7194">
@@ -972,6 +868,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day7 Filter下午/源码/jsp/web/1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day7 Filter下午/源码/jsp/web/2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day7 Filter下午/源码/jsp/web/3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/softwareforcode/apache-tomcat-8.5.54-windows-x64/apache-tomcat-8.5.54/lib/jsp-api.jar!/javax/servlet/jsp/JspContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day7 Filter下午/源码/jsp/web/domain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/domain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VersionControl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="195" column="23" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://D:/softwareforcode/apache-tomcat-8.5.54-windows-x64/apache-tomcat-8.5.54/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -979,10 +945,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VersionControl">
+    <entry file="file://$USER_HOME$/Desktop/Java资料/Java-EE/Day7 Filter下午/源码/jsp/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="208" column="11" selection-start-line="208" selection-start-column="11" selection-end-line="208" selection-end-column="11" />
+        <state relative-caret-position="192">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javaee08-JSP/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>

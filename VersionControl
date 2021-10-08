@@ -179,16 +179,22 @@
         [总结（还没理解透彻）][1]访问.../index.jsp；[2]请求会交给jsp引擎，它会到指定应用的指定目录中寻找该jsp文件；[3]按照一定的规则将jsp文件翻译为java文件（本质上来说也是一个servlet）；
                            [4]java文件编译成class文件；[5]执行该class文件的service方法；[6]里面有一个对象可以往response中塞入html的各种标签；
                            [7]connector读取response中的数据，形成一个响应报文（html的标签此时就在响应体中）；[8]浏览器拿到响应报文，解析，渲染页面。
-    【JSP语法】
+    【JSP语法】1.jsp
         [1]骨架：html标签。 //这些标签jsp会原封不动地直接将其响应给客户端。       <html> -> out.write("html\n");
         [2]表达式：<%=%>  //jsp表达式内部的代码会直接响应到客户端。       <%=new Date()%> -> out.print(new Date())
+                         //<%=变量 %> 是 <% out.println(变量) %> 的简写方式。
         [3]脚本片段：<%%>  //jsp脚本片段里面的代码会原封不动地翻译到java文件地service方法中。      <%System.out.println("hello,jsp");%> -> System.out.println("hello,jsp");
                          //jsp脚本片段里面地代码会不会影响到客户端？不一定。Response.getWriter().println()
                          //jsp脚本片段可以写多个，每个片段可以不符合java语法，但是最终翻译以后，要符合java语法。
         [4]声明：<%!%>    //<%!%>里面的代码会被翻译到_jspService方法的外部。_jspService方法内部定义了几个对象，所以此时声明中无法使用这些对象。
                          //jsp中可以写java代码，但是是有前提条件的：jsp表达式、jsp脚本片段、jsp声明里面可以写java代码，除此之外都是普通的文本。
         [5]注释：<%----%> //jsp注释和html注释都是写在空白区域的。java注释必须要写在jsp脚本片段和jsp声明中。
-    【JSP九大对象】
+    【JSP指令】2.jsp、3.jsp
+        JSP指令用来设置与整个JSP页面相关的属性。 语法格式：<%@ directive attribute="value" %>
+        这里有三种指令标签：1.<%@ page ... %>  //定义页面的依赖属性，比如脚本语言、error页面、缓存需求等等
+                         2.<%@ include ... %>  //包含其他文件
+                         3.<%@ taglib ... %>  //引入标签库的定义，可以是自定义标签
+    【JSP九大对象】domain.jsp
         指，在_jspService方法内部，存在9个对象。在jsp页面中，通过jsp表达式、jsp脚本片段，可以直接使用。
             request（HttpServletRequest）、Response（HttpServletResponse）、pageContext（PageContext）、
             Session（HttpSession）、Application（ServletContext）、Config（ServletConfig）、

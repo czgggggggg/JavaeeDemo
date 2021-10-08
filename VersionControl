@@ -171,6 +171,41 @@
 【模块07】Javaee07-Cart//购物车
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块08】Javaee08-JSP
+    【JSP原理】
+        http://localhost:8080  没写应用名也没写资源名，默认访问的是ROOT应用的index页面。  http://localhost:8080=http://localhost:8080(/ROOT)/index.jsp
+        url-pattern优先级：/* > *.jsp > /
+        当访问index.jsp的时候，其实是tomcat中一个叫做jsp的servlet在处理请求。  //匹配*.jsp和*.jspx
+        当访问html、png、jpg，这个时候如果没有配置相应的servlet，tomcat就调用缺省servlet来处理请求（请求不能没有组件来相应）。
+        [总结（还没理解透彻）][1]访问.../index.jsp；[2]请求会交给jsp引擎，它会到指定应用的指定目录中寻找该jsp文件；[3]按照一定的规则将jsp文件翻译为java文件（本质上来说也是一个servlet）；
+                           [4]java文件编译成class文件；[5]执行该class文件的service方法；[6]里面有一个对象可以往response中塞入html的各种标签；
+                           [7]connector读取response中的数据，形成一个响应报文（html的标签此时就在响应体中）；[8]浏览器拿到响应报文，解析，渲染页面。
+    【JSP语法】
+        [1]骨架：html标签。 //这些标签jsp会原封不动地直接将其响应给客户端。       <html> -> out.write("html\n");
+        [2]表达式：<%=%>  //jsp表达式内部的代码会直接响应到客户端。       <%=new Date()%> -> out.print(new Date())
+        [3]脚本片段：<%%>  //jsp脚本片段里面的代码会原封不动地翻译到java文件地service方法中。      <%System.out.println("hello,jsp");%> -> System.out.println("hello,jsp");
+                         //jsp脚本片段里面地代码会不会影响到客户端？不一定。Response.getWriter().println()
+                         //jsp脚本片段可以写多个，每个片段可以不符合java语法，但是最终翻译以后，要符合java语法。
+        [4]声明：<%!%>    //<%!%>里面的代码会被翻译到_jspService方法的外部。_jspService方法内部定义了几个对象，所以此时声明中无法使用这些对象。
+                         //jsp中可以写java代码，但是是有前提条件的：jsp表达式、jsp脚本片段、jsp声明里面可以写java代码，除此之外都是普通的文本。
+        [5]注释：<%----%> //jsp注释和html注释都是写在空白区域的。java注释必须要写在jsp脚本片段和jsp声明中。
+    【JSP九大对象】
+        指，在_jspService方法内部，存在9个对象。在jsp页面中，通过jsp表达式、jsp脚本片段，可以直接使用。
+            request（HttpServletRequest）、Response（HttpServletResponse）、pageContext（PageContext）、
+            Session（HttpSession）、Application（ServletContext）、Config（ServletConfig）、
+            Page（this）、Out（JspWriter）、Exception（Throwable）
+        [1]pageContext域
+            域范围大小：当前页面有效。  pageContext.setAttribute(key,value)
+                <%pageContext.setAttribute("key","page")%>  <%pageContext.getAttribute("key")%>
+            可以给其他域赋值。  pageContext.setAttribute(key,value,scope)
+                If(scope == PageContext.REQUEST_SCOPE)
+                    pageContext.getRequest().setAttribute(key,value)
+                If(scope == PageContext.SESSION_SCOPE)
+                    pageContext.getSession().setAttribute(key,value)
+                ...
+            pageContext.findAttribute(key)
+                findAttribute 在查找数据的时候，从小到大依次进行查找，找到则结束，找不到则继续到下一个域。
+                Page < request < session < context
+            pageContext是jsp中最核心的一个对象，通过pageContext可以得到其他8个对象。
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 【模块09】Javaee09-Filter
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------

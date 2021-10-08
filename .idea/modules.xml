@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" filepath="$PROJECT_DIR$/Javaee04-Fileupload/Javaee04-Fileupload.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javaee05-Cookie/Javaee05-Cookie.iml" filepath="$PROJECT_DIR$/Javaee05-Cookie/Javaee05-Cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javaee06-Session/Javaee06-Session.iml" filepath="$PROJECT_DIR$/Javaee06-Session/Javaee06-Session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee07-Cart/Javaee07-Cart.iml" filepath="$PROJECT_DIR$/Javaee07-Cart/Javaee07-Cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Javaee08-JSP/Javaee08-JSP.iml" filepath="$PROJECT_DIR$/Javaee08-JSP/Javaee08-JSP.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaeeDemo.iml" filepath="$PROJECT_DIR$/JavaeeDemo.iml" />
     </modules>
   </component>
